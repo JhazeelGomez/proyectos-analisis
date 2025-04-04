@@ -73,34 +73,46 @@ Este proyecto analiza datos de ventas minoristas en diferentes centros comercial
     <p>A continuación, se muestra un fragmento del código utilizado para analizar los datos:</p>
     <div class="code-snippet">
         <pre>
+#Importamos las librerias necesarias
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 # Cargar datos
-data = pd.read_csv('ventas.csv')
+df = pd.read_csv("/Users/jhazgomezjaimez/Downloads/customer_shopping_data.csv")
 
 # Análisis de las categorías más vendidas
-top_categories = data['categoria'].value_counts().head(10)
+top_products = df.groupby('category')['quantity'].sum().sort_values(ascending=False)
+top_products.head(10)
 
 # Visualización
-sns.barplot(x=top_categories.index, y=top_categories.values)
-plt.title('Top 10 Categorías Más Vendidas')
-plt.xlabel('Categorías')
-plt.ylabel('Ventas')
+plt.figure(figsize=(10,5))
+top_products.plot(kind='bar', color='skyblue')
+plt.title('Top de Categorías de Productos Más Vendidos')
+plt.xlabel('Categoría de Producto')
+plt.ylabel('Cantidad Vendida')
+plt.xticks(rotation=45)
 plt.show()
         </pre>
     </div>
 
     <h3>Resultados</h3>
-    <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, tecnología y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
+    <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, cosmeticos y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
 
     <h3>Visualizaciones</h3>
     <p>El siguiente gráfico muestra las categorías más vendidas en el período de estudio:</p>
     <img src="Captura de pantalla 2025-04-03 a la(s) 23.05.53.png" alt="Gráfico de Categorías Más Vendidas" style="max-width:100%;height:auto;">
     
     <h3>Conclusiones</h3>
-    <p>El análisis ha permitido obtener insights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
+    <p>Posterior a un análisis de las tendencias de compra en los diferentes grupos de edad y género, se pueden extraer las siguientes conclusiones:
+<ul>
+<li>La categoría de ropa es la más popular entre los consumidores de 20 a 35 años, lo que indica un alto interés en la moda y las tendencias dentro de este segmento.</li>
+<li>Las mujeres representan el 59.81% del total de compras, mientras que los hombres el 40.19%, lo que sugiere que el público femenino tiene una mayor participación en el consumo. Esto podría deberse a que suelen realizar compras más diversificadas y recurrentes, especialmente en categorías como ropa, hogar y belleza.</li>
+<li>Las preferencias de compra varian con la edad: Los consumidores (18-30 años) muestran mayor interés en la ropa. Los consumidores mayores de 50 años enfocan sus compras en productos esenciales y comodidad.</li>
+ </ul><br>   
+De esta manera concluimos como el género y la edad influyen en la selección de productos, lo que puede ayudar a las empresas a personalizar sus estrategias de marketing.Ensights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
+
 </div>
 
 <footer>
