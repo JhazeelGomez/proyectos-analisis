@@ -1,123 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de Análisis de Datos en Python</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-        .code-snippet {
-            background-color: #f1f1f1;
-            border-left: 5px solid #4CAF50;
-            padding: 15px;
-            font-family: "Courier New", monospace;
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Mis Proyectos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .project {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .project h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #555;
+    }
+    .code-snippet {
+        background-color: #f1f1f1;
+        border-left: 5px solid #4CAF50;
+        padding: 15px;
+        font-family: "Courier New", monospace;
+        margin: 10px 0;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #adaead;
+        color: rgb(0, 0, 0);
+    }
+    header {
+        background-color: #adaead;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px;
+    }
+  </style>
 </head>
 <body>
+    <header>
+        <h1>Portafolio de proyectos</h1>
+        <p>Presentación de proyectos, resultados y código Python realizados en diferentes proyectos</p>
+    </header>
+  <div class="project">
+    <h2>Proyecto 1: Visor de Noticias RSS</h2>
 
-<header>
-    <h1>Proyecto de Análisis de Datos en Python</h1>
-    <p>Presentación de resultados y código Python para análisis de ventas minoristas</p>
-</header>
+    <h2>
+      <h1>Proyecto de Análisis de Datos en Python</h1>
+      <p>Presentación de resultados y código Python para análisis de ventas minoristas</p>
+    </h2>
+      
+      <div class="container">
+          <h2>Descripción del Proyecto</h2>
+          <p> Nuestro conjunto de datos contiene información de compras de 10 centros comerciales diferentes entre 2021 y 2023. Hemos recopilado datos de diversos grupos de edad y géneros para proporcionar una visión completa de los hábitos de compra en Estambul.
+      
+      Este proyecto analiza datos de ventas minoristas en diferentes centros comerciales de Estambul entre 2021 y 2023. El objetivo es identificar tendencias de compra, preferencias de productos según edad y género, y patrones en métodos de pago</p>
+      
+          <h3>Objetivos del Proyecto:</h3>
+          <ul>
+              <li>Explorar los datos de ventas y obtener objetivos clave.</li>
+              <li>Identificar patrones en las compras de diferentes grupos de clientes.</li>
+              <li>Visualizar los resultados usando bibliotecas como Matplotlib y Seaborn.</li>
+          </ul>
+      
+          <h3>Código Python</h3>
+          <p>A continuación, se muestra un fragmento del código utilizado para analizar los datos:</p>
+          <div class="code-snippet">
+              <pre>
+      #Importamos las librerias necesarias
+      import pandas as pd
+      import numpy as np
+      import seaborn as sns
+      import matplotlib.pyplot as plt
+      
+      # Cargar datos
+      df = pd.read_csv("/Users/jhazgomezjaimez/Downloads/customer_shopping_data.csv")
+      
+      # Análisis de las categorías más vendidas
+      top_products = df.groupby('category')['quantity'].sum().sort_values(ascending=False)
+      top_products.head(10)
+      
+      # Visualización
+      plt.figure(figsize=(10,5))
+      top_products.plot(kind='bar', color='skyblue')
+      plt.title('Top de Categorías de Productos Más Vendidos')
+      plt.xlabel('Categoría de Producto')
+      plt.ylabel('Cantidad Vendida')
+      plt.xticks(rotation=45)
+      plt.show()
+              </pre>
+          </div>
+      
+          <h3>Resultados</h3>
+          <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, cosmeticos y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
+      
+          <h3>Visualizaciones</h3>
+          <p>El siguiente gráfico muestra las categorías más vendidas en el período de estudio:</p>
+          <img src="Captura de pantalla 2025-04-03 a la(s) 23.05.53.png" alt="Gráfico de Categorías Más Vendidas" style="max-width:100%;height:auto;">
+          
+          <h3>Conclusiones</h3>
+          <p>Posterior a un análisis de las tendencias de compra en los diferentes grupos de edad y género, se pueden extraer las siguientes conclusiones:
+      <ul>
+      <li>La categoría de ropa es la más popular entre los consumidores de 20 a 35 años, lo que indica un alto interés en la moda y las tendencias dentro de este segmento.</li>
+      <li>Las mujeres representan el 59.81% del total de compras, mientras que los hombres el 40.19%, lo que sugiere que el público femenino tiene una mayor participación en el consumo. Esto podría deberse a que suelen realizar compras más diversificadas y recurrentes, especialmente en categorías como ropa, hogar y belleza.</li>
+      <li>Las preferencias de compra varian con la edad: Los consumidores (18-30 años) muestran mayor interés en la ropa. Los consumidores mayores de 50 años enfocan sus compras en productos esenciales y comodidad.</li>
+      </ul><br>   
+      De esta manera concluimos como el género y la edad influyen en la selección de productos, lo que puede ayudar a las empresas a personalizar sus estrategias de marketing.Insights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
+      
+      </div>
 
-<div class="container">
-    <h2>Descripción del Proyecto</h2>
-    <p> Nuestro conjunto de datos contiene información de compras de 10 centros comerciales diferentes entre 2021 y 2023. Hemos recopilado datos de diversos grupos de edad y géneros para proporcionar una visión completa de los hábitos de compra en Estambul.
+    <p>Aplicación que consume un feed RSS desde el New York Times y muestra las noticias en una interfaz sencilla. Desarrollado con React y Node.js.</p>
+  </div>
 
-Este proyecto analiza datos de ventas minoristas en diferentes centros comerciales de Estambul entre 2021 y 2023. El objetivo es identificar tendencias de compra, preferencias de productos según edad y género, y patrones en métodos de pago</p>
+  <div class="project">
+    <h2>Proyecto 2: Sistema de Gestión de Tareas</h2>
+    <p>Plataforma web para organizar tareas diarias, asignar prioridades y marcar completadas. Incluye autenticación de usuarios y base de datos en MongoDB.</p>
+  </div>
 
-    <h3>Objetivos del Proyecto:</h3>
-    <ul>
-        <li>Explorar los datos de ventas y obtener objetivos clave.</li>
-        <li>Identificar patrones en las compras de diferentes grupos de clientes.</li>
-        <li>Visualizar los resultados usando bibliotecas como Matplotlib y Seaborn.</li>
-    </ul>
-
-    <h3>Código Python</h3>
-    <p>A continuación, se muestra un fragmento del código utilizado para analizar los datos:</p>
-    <div class="code-snippet">
-        <pre>
-#Importamos las librerias necesarias
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Cargar datos
-df = pd.read_csv("/Users/jhazgomezjaimez/Downloads/customer_shopping_data.csv")
-
-# Análisis de las categorías más vendidas
-top_products = df.groupby('category')['quantity'].sum().sort_values(ascending=False)
-top_products.head(10)
-
-# Visualización
-plt.figure(figsize=(10,5))
-top_products.plot(kind='bar', color='skyblue')
-plt.title('Top de Categorías de Productos Más Vendidos')
-plt.xlabel('Categoría de Producto')
-plt.ylabel('Cantidad Vendida')
-plt.xticks(rotation=45)
-plt.show()
-        </pre>
-    </div>
-
-    <h3>Resultados</h3>
-    <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, cosmeticos y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
-
-    <h3>Visualizaciones</h3>
-    <p>El siguiente gráfico muestra las categorías más vendidas en el período de estudio:</p>
-    <img src="Captura de pantalla 2025-04-03 a la(s) 23.05.53.png" alt="Gráfico de Categorías Más Vendidas" style="max-width:100%;height:auto;">
-    
-    <h3>Conclusiones</h3>
-    <p>Posterior a un análisis de las tendencias de compra en los diferentes grupos de edad y género, se pueden extraer las siguientes conclusiones:
-<ul>
-<li>La categoría de ropa es la más popular entre los consumidores de 20 a 35 años, lo que indica un alto interés en la moda y las tendencias dentro de este segmento.</li>
-<li>Las mujeres representan el 59.81% del total de compras, mientras que los hombres el 40.19%, lo que sugiere que el público femenino tiene una mayor participación en el consumo. Esto podría deberse a que suelen realizar compras más diversificadas y recurrentes, especialmente en categorías como ropa, hogar y belleza.</li>
-<li>Las preferencias de compra varian con la edad: Los consumidores (18-30 años) muestran mayor interés en la ropa. Los consumidores mayores de 50 años enfocan sus compras en productos esenciales y comodidad.</li>
- </ul><br>   
-De esta manera concluimos como el género y la edad influyen en la selección de productos, lo que puede ayudar a las empresas a personalizar sus estrategias de marketing.Insights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
-
-</div>
-
-<footer>
+  <footer>
     <p>Creado por [Jhazeel Gomez] | Proyecto de Análisis de Datos | 2025</p>
 </footer>
 
 </body>
 </html>
+
