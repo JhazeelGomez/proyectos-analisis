@@ -124,7 +124,64 @@
 
   <div class="project">
     <h2>Proyecto 2: Telecomunicaciones</h2>
-    <p>Identificar Operadores Ineficaces en el servicio de telefonia CallMeMaybe.
+     <div class="container">
+          <h2>Descripción del Proyecto</h2>
+          <p> En los servicios de telecomunicaciones, la calidad de las interacciones entre los operadores y los clientes es fundamental para garantizar una experiencia satisfactoria. No todos los operadores trabajan con el mismo nivel de eficiencia; Factores como una alta cantidad de llamadas perdidas, tiempos de espera prolongadoS, pueden ser indicadores de ineficiencia..
+      
+      Los datasets contienen información sobre el uso del servicio de telefonía virtual CallMeMaybe. El análisis de estos datos permitirá a los supervisores tomar decisiones informadas, optimizar el rendimiento del equipo y mejorar la calidad del servicio ofrecido</p>
+      
+          <h3>Objetivos del Proyecto:</h3>
+          <ul>
+              <li>Explorar los datos de ventas y obtener objetivos clave.</li>
+              <li>Identificar patrones en las compras de diferentes grupos de clientes.</li>
+              <li>Visualizar los resultados usando bibliotecas como Matplotlib y Seaborn.</li>
+          </ul>
+      
+          <h3>Código Python</h3>
+          <p>A continuación, se muestra un fragmento del código utilizado para analizar los datos:</p>
+          <div class="code-snippet">
+              <pre>
+      #Importamos las librerias necesarias
+      import pandas as pd
+      import numpy as np
+      import seaborn as sns
+      import matplotlib.pyplot as plt
+      
+      # Cargar datos
+      df = pd.read_csv("/Users/jhazgomezjaimez/Downloads/customer_shopping_data.csv")
+      
+      # Análisis de las categorías más vendidas
+      top_products = df.groupby('category')['quantity'].sum().sort_values(ascending=False)
+      top_products.head(10)
+      
+      # Visualización
+      plt.figure(figsize=(10,5))
+      top_products.plot(kind='bar', color='skyblue')
+      plt.title('Top de Categorías de Productos Más Vendidos')
+      plt.xlabel('Categoría de Producto')
+      plt.ylabel('Cantidad Vendida')
+      plt.xticks(rotation=45)
+      plt.show()
+              </pre>
+          </div>
+      
+          <h3>Resultados</h3>
+          <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, cosmeticos y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
+      
+          <h3>Visualizaciones</h3>
+          <p>El siguiente gráfico muestra las categorías más vendidas en el período de estudio:</p>
+          <img src="Captura de pantalla 2025-04-03 a la(s) 23.05.53.png" alt="Gráfico de Categorías Más Vendidas" style="max-width:100%;height:auto;">
+          
+          <h3>Conclusiones</h3>
+          <p>Posterior a un análisis de las tendencias de compra en los diferentes grupos de edad y género, se pueden extraer las siguientes conclusiones:
+      <ul>
+      <li>La categoría de ropa es la más popular entre los consumidores de 20 a 35 años, lo que indica un alto interés en la moda y las tendencias dentro de este segmento.</li>
+      <li>Las mujeres representan el 59.81% del total de compras, mientras que los hombres el 40.19%, lo que sugiere que el público femenino tiene una mayor participación en el consumo. Esto podría deberse a que suelen realizar compras más diversificadas y recurrentes, especialmente en categorías como ropa, hogar y belleza.</li>
+      <li>Las preferencias de compra varian con la edad: Los consumidores (18-30 años) muestran mayor interés en la ropa. Los consumidores mayores de 50 años enfocan sus compras en productos esenciales y comodidad.</li>
+      </ul><br>   
+      De esta manera concluimos como el género y la edad influyen en la selección de productos, lo que puede ayudar a las empresas a personalizar sus estrategias de marketing.Insights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
+      
+      </div>
 
   <footer>
     <p>Creado por [Jhazeel Gomez] | Proyecto de Análisis de Datos | 2025</p>
