@@ -43,4 +43,67 @@
         }
         footer {
             text-align: center;
-            padding:
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Proyecto de Análisis de Datos en Python</h1>
+    <p>Presentación de resultados y código Python para análisis de ventas minoristas</p>
+</header>
+
+<div class="container">
+    <h2>Descripción del Proyecto</h2>
+    <p>Este proyecto utiliza Python para analizar un conjunto de datos de ventas minoristas. El análisis incluye la exploración de patrones en los productos más vendidos, segmentación de clientes y análisis de la distribución por género y edad.</p>
+
+    <h3>Objetivos del Proyecto:</h3>
+    <ul>
+        <li>Explorar los datos de ventas y obtener insights clave.</li>
+        <li>Identificar patrones en las compras de diferentes grupos de clientes.</li>
+        <li>Visualizar los resultados usando bibliotecas como Matplotlib y Seaborn.</li>
+    </ul>
+
+    <h3>Código Python</h3>
+    <p>A continuación, se muestra un fragmento del código utilizado para analizar los datos:</p>
+    <div class="code-snippet">
+        <pre>
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Cargar datos
+data = pd.read_csv('ventas.csv')
+
+# Análisis de las categorías más vendidas
+top_categories = data['categoria'].value_counts().head(10)
+
+# Visualización
+sns.barplot(x=top_categories.index, y=top_categories.values)
+plt.title('Top 10 Categorías Más Vendidas')
+plt.xlabel('Categorías')
+plt.ylabel('Ventas')
+plt.show()
+        </pre>
+    </div>
+
+    <h3>Resultados</h3>
+    <p>El análisis mostró que las categorías más populares entre los consumidores fueron ropa, tecnología y alimentos. Además, se identificaron diferencias significativas en las preferencias de productos según el género y la edad.</p>
+
+    <h3>Visualizaciones</h3>
+    <p>El siguiente gráfico muestra las categorías más vendidas en el período de estudio:</p>
+    <img src="grafico_categorias.png" alt="Gráfico de Categorías Más Vendidas" style="max-width:100%;height:auto;">
+    
+    <h3>Conclusiones</h3>
+    <p>El análisis ha permitido obtener insights valiosos sobre los hábitos de compra de los clientes. Estos resultados pueden ser utilizados para mejorar estrategias de marketing y personalización de productos.</p>
+</div>
+
+<footer>
+    <p>Creado por [Jhazeel Gomez] | Proyecto de Análisis de Datos | 2025</p>
+</footer>
+
+</body>
+</html>
