@@ -1,8 +1,3 @@
-# anubhavgupta.github.io
-Portfolio for Anubhav Gupta
+# Jhazeel Gomez.github.io
+Este es mi sitio web, donde comparto mi portafolio de proyectos de análisis de datos.
 
-Based on the template from start bootstrap
-http://startbootstrap.com/template-overviews/creative/
-
-TODO
-# Need to add separate pages for each of the projects
