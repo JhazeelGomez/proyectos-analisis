@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Anubhav Gupta</title>
+    <title>Jhazeel Gomez</title>
     <link rel="shortcut icon" href="img/a-icon.ico" />
 
     <!-- Bootstrap Core CSS -->
@@ -54,7 +54,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -68,54 +68,43 @@
             <div class="row">
                 <div class="col-lg-8 text-center" style="text-align: left">
                     <!-- <hr class="light"> -->
-                    <h2 style="font-style: italic">This is Jeopardy!<h2>
-                    <h4>CONCEPT</h4>
+                    <h2 style="font-style: italic">Telecomunicaciones<h2>
+                    <h4>Descripción del proyecto</h4>
                     <p class="text-faded" style="font-size: small">
-                    This project describes a new, emerging way to shed light on a complex dataset and to communicate the findings with a broad audience. We begin this process with some exploratory data analysis, then create interactive visualizations and embed them within a narrative using infographics. We illustrate the concepts using data from 30 seasons of the TV game show Jeopardy!. Our findings uncover interesting patterns, both qualitative and quantitative, and explain our use of popular technologies during each phase of the process [1]. In this paper, we describe in detail the process by which we explored the data and built the visualizations that underlie that work.</p>
-                    <h4>DATA</h4>
+                        En los servicios de telecomunicaciones, la calidad de las interacciones entre los operadores y los clientes es fundamental para garantizar una experiencia satisfactoria. No todos los operadores trabajan con el mismo nivel de eficiencia; Factores como una alta cantidad de llamadas perdidas, tiempos de espera prolongadoS, pueden ser indicadores de ineficiencia.
+                        <br><br>
+                        Los datasets contienen información sobre el uso del servicio de telefonía virtual CallMeMaybe. El análisis de estos datos permitirá a los supervisores tomar decisiones informadas, optimizar el rendimiento del equipo y mejorar la calidad del servicio ofrecido.</p>
+                    <h4>Objetivos del proyecto</h4>
                     <p class="text-faded" style="font-size: small">
-                    The initial dataset, found on Reddit, included qualitative data on over 200,000 Jeopardy! questions. It had data on the round that the question corresponded to, the questions and answers themselves, the dollar value of the question, and the show number and air date.
-                    <br><br>
-                    In our exploratory data analysis phase, we found several interesting results. For example, we found that the most frequent type of answers were related to geography. We also noticed, while looking at the average question value across years, that there was a large increase between 2001 and 2002. In 2001, the average question value was $496. It increased to $940 in 2002. With additional research, we found that the values doubled on November 26, 2001. This finding informed some of the subsequent decisions we made with respect to comparing episodes across time.
+                        Llevar a cabo el análisis exploratorio de datos: Comprender la estructura del dataset(tipos de llamadas entrantes, salientes, internas, tiempos de espera, llamadas perdidas, identificar posibles anomalías en los datos.<br><br>
+                        Identificar operadores ineficaces Definir los criterios para poder clasificar a un operador como ineficaz.<br><br>
+                        Pruebas de hipótesis Estadística: Verificar si los operadores ineficaces tienen un impacto significativo en el desempeño general del servicio.<br><br>
                     </p>
-                    <h4>PROCESS</h4>
+                    <h4>Resultados</h4>
                     <p class="text-faded" style="font-size: small">
-                    In order to analyze the Jeopardy data and generate insights out of it, we followed the a process that looked at the data using the following visualizations:
-                    <ul class="text-faded" style="font-size: small">
-                        <li>
-                        Contestant and Gender Infographics and Line Chart
-                        </li>
-                        <li>
-                        Exploratory Data Analysis using Tableau</li>
-                        <li>
-                        Exploring the wagers data
-                        </li>
-                        <li>
-                        Parallel Coordinate Visualization
-                        </li>
-                        <li>
-                        Linking Line Chart
-                        </li>
-                        <li>
-                        Scatter Plot
-                        </li>
-                        <li>
-                        Bipartite Graph
-                        </li>
-                        <li>
-                        Jeopardy! Game Board
-                        </li>
-                    </ul>
+                        A través del análisis de clústeres, se logró segmentar a los operadores en grupos con características similares de desempeño:
+                    <br>
+                    El análisis permitió aislar al grupo de operadores que requieren intervención inmediata (formación, supervisión o cambios de proceso), debido a sus métricas elevadas en:
+                    Tiempo promedio de espera.
+                    Porcentaje de llamadas perdidas.
                     </p>
-                   <a href="http://people.ischool.berkeley.edu/~japple/jeopardy/" " class="btn btn-primary btn-xl page-scroll" target="_blank">View Visualization</a>
+                    <h4>Conclusiones</h4>
+                    <p class="text-faded" style="font-size: small">
+                        Se detectaron ciertos operadores con un desempeño deficiente. Los operadores menos eficaces mostraron una cantidad significativamente mayor de llamadas no atendidas.
+                        tiempos de espera prolongados, los operadores ineficaces están asociados con una mayor insatisfacción del cliente, debido a tiempos de espera prolongados y menor capacidad de resolución en llamadas entrantes.
+                        Se realizo una distribución por clústeres para poder segmentar los operadores de acuerdo a su desempeño. Las diferencias observadas entre los operadores eficaces e ineficaces son significativas.
+                        <br><br>
+                        Recomendaciones
+                        Como analista de datos requerimos contar con mayor información. Por ejemplo, el horario de las llamadas; esto nos permitirá obtener las horas pico donde los usuarios realizan más llamadas y de esta manera obtener métricas que generen más valor para la toma de decisiones.
+                        Notificaciones proactivas: Implementar un sistema de notificaciones para detectar problemas de eficiencia de forma temprana, que genere un reporte sobre el desempeño de los operadores.
+                        <br>
+                    </p>
                 </div>
                 <div class="col-lg-4 text-center" style="padding-top: 100px">
-                <img src="img/jeopardy/jeopardy1.png" class="img-responsive" alt="" style="margin :auto">
-                <p>Line chart showing the gender divide</p>
-                <img src="img/jeopardy/jeopardy2.png" class="img-responsive" alt="" style="margin :auto">
-                <p>Parallel Coordinate Visualization</p>
-                <img src="img/jeopardy/jeopardy3.png" class="img-responsive" alt="" style="margin :auto">
-                <p>Heatmap and Linking Line Chart</p>
+                <img src="img/jeopardy/grafica1.jpeg" class="img-responsive" alt="" style="margin :auto" height="300" width="300">
+                <p>Cluster de operadores segun su eficiencia</p>
+                <img src="img/jeopardy/grafica2.jpeg" class="img-responsive" alt="" style="margin :auto" height="300" width="300">
+                <p>Grafico de operadores eficientes e ineficientes</p>
                 </div>
             </div>
         </div>
@@ -125,20 +114,20 @@
         <div class="container">
             <div class="row" class="call-to-action">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Get In Touch!</h2>
+                    <h2 class="section-heading">Puedes contactarme en:</h2>
                     <hr class="primary">
                 </div>
                 <div class="col-lg-2 col-lg-offset-3 text-center">
-                    <a href="https://github.com/binnie869" class="fa fa-github fa-3x wow bounceIn"></a>
+                    <a href="https://github.com/JhazeelGomez" class="fa fa-github fa-3x wow bounceIn"></a>
                 </div>
                 <div class="col-lg-2  text-center">
-                    <a href="https://www.linkedin.com/in/anubhavg1" class="fa fa-linkedin fa-3x wow bounceIn"></a>
+                    <a href="https://www.linkedin.com/in/jhazeel-gomez/" class="fa fa-linkedin fa-3x wow bounceIn"></a>
                 </div>
                 <!--div class="col-lg-1 text-center">
                     <a class="fa fa-phone fa-3x wow bounceIn"></i>
                 </div-->
                 <div class="col-lg-2 text-center">
-                    <a href="mailto:anubhav.rg@berkeley.edu" class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></a>
+                    <a href="mailto:gomezjhazeel@gmail.com" class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></a>
                 </div>
             </div>
         </div>
